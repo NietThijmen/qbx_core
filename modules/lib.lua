@@ -342,6 +342,7 @@ if isServer then
         end
 
         --- prevent server from deleting a vehicle without an owner
+        ---@diagnostic disable-next-line: undefined-global
         SetEntityOrphanMode(veh, 2)
         exports.qbx_core:EnablePersistence(veh)
         return netId, veh
